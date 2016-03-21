@@ -14,6 +14,7 @@
 		E9CF97371BF341A6000B91C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9CF97351BF341A6000B91C8 /* LaunchScreen.storyboard */; };
 		E9CF97421BF341A6000B91C8 /* NavigationAwesomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CF97411BF341A6000B91C8 /* NavigationAwesomeTests.swift */; };
 		E9CF974D1BF341A6000B91C8 /* NavigationAwesomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CF974C1BF341A6000B91C8 /* NavigationAwesomeUITests.swift */; };
+		E9CF975C1BF34250000B91C8 /* NavigationAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CF975B1BF34250000B91C8 /* NavigationAwesome.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		E9CF97481BF341A6000B91C8 /* NavigationAwesomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NavigationAwesomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9CF974C1BF341A6000B91C8 /* NavigationAwesomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationAwesomeUITests.swift; sourceTree = "<group>"; };
 		E9CF974E1BF341A7000B91C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9CF975B1BF34250000B91C8 /* NavigationAwesome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationAwesome.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		E9CF97201BF341A5000B91C8 = {
 			isa = PBXGroup;
 			children = (
+				E9CF975A1BF341D2000B91C8 /* Lib */,
 				E9CF972B1BF341A6000B91C8 /* NavigationAwesome */,
 				E9CF97401BF341A6000B91C8 /* NavigationAwesomeTests */,
 				E9CF974B1BF341A6000B91C8 /* NavigationAwesomeUITests */,
@@ -123,6 +126,14 @@
 				E9CF974E1BF341A7000B91C8 /* Info.plist */,
 			);
 			path = NavigationAwesomeUITests;
+			sourceTree = "<group>";
+		};
+		E9CF975A1BF341D2000B91C8 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				E9CF975B1BF34250000B91C8 /* NavigationAwesome.swift */,
+			);
+			path = Lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9CF975C1BF34250000B91C8 /* NavigationAwesome.swift in Sources */,
 				E9CF972F1BF341A6000B91C8 /* ViewController.swift in Sources */,
 				E9CF972D1BF341A6000B91C8 /* AppDelegate.swift in Sources */,
 			);
