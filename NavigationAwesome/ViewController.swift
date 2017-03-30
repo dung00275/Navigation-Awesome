@@ -18,14 +18,14 @@ class ViewController: UIViewController {
     }
     
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 //        self.navigationController?.navigationBar.backgroundColor = UIColor.clearColor()
 //        self.scrollViewDidScroll(self.tableView)
 //        self.navigationController?.navigationBar.shadowImage = UIImage()
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.navigationBar.lt_reset()
         
@@ -41,20 +41,20 @@ class ViewController: UIViewController {
 }
 
 extension ViewController{
-    func setNavigationBarTransformProgress(progress:CGFloat){
+    func setNavigationBarTransformProgress(_ progress:CGFloat){
         self.navigationController?.navigationBar.lt_setTranslationY(-44 * progress)
         self.navigationController?.navigationBar.lt_setElementsAlpha(1 - progress)
     }
 }
 
 extension ViewController:UITableViewDataSource{
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 200;
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCellWithIdentifier("Cell") else{
-            let newCell = UITableViewCell(style: .Default, reuseIdentifier: "Cell")
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") else{
+            let newCell = UITableViewCell(style: .default, reuseIdentifier: "Cell")
             newCell.textLabel?.text = "Cell at : \(indexPath.row)"
             return newCell
         }
@@ -63,7 +63,6 @@ extension ViewController:UITableViewDataSource{
         return cell;
 
     }
-    
 }
 
 extension ViewController:UIScrollViewDelegate{
@@ -79,7 +78,7 @@ extension ViewController:UIScrollViewDelegate{
 //        }
 //    }
     
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
         
         if offsetY > 0{
